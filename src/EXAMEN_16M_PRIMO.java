@@ -5,7 +5,7 @@ public class EXAMEN_16M_PRIMO {
 	public static void main(String[] args) {
 		Scanner ent = new Scanner (System.in);
 		int num1=0;
-		int posicion=0;
+		int contador=0;
 		
 		System.out.println("Buenos días Ceinmark, soy Pablo Moreta");
 		System.out.println("Introduce un número para averiguar si es primo o no: ");
@@ -19,8 +19,8 @@ public class EXAMEN_16M_PRIMO {
 						
 			if (num1 % i == 0) {
 				primo = false;
-				divisores[posicion]=i;
-				posicion++;					
+				divisores[contador]=i;
+				contador++;					
 			}
 		}
 		if (primo == true) {
@@ -33,11 +33,9 @@ public class EXAMEN_16M_PRIMO {
 			
 		}
 		System.out.printf("Los divisores del número " + num1 + " son: ");
-		for (int i = 0; i < posicion; i++) {
+		for (int i = contador - 1; i >= 0; i --) {
 			System.out.printf(divisores[i]+ ",");
 		}    
 		      
 		}
 	}
-
-
